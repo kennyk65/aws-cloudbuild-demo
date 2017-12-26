@@ -4,12 +4,15 @@ version: 0.1
 phases:
   build:
     commands:
-      - echo Build started on `date`
+      - echo Testing started on `date`
       - mvn test
+      - echo Testing finished on `date`
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build started on `date`
       - mvn package
+      - echo Build finished on `date`
 artifacts:
   files:
     - target/spring-cloud-aws-environment-demo-1.war
+  discard-paths: yes
