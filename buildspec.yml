@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 
 # This is a configuration file for AWS CodeBuild.  It just runs maven.
 # The test phase is run separately from the package phase, just to enable splitting later.
