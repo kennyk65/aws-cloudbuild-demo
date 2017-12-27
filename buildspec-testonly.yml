@@ -1,0 +1,10 @@
+version: 0.2
+
+# This is a configuration file for AWS CodeBuild.  It just runs mvn test.
+# The test phase is run separately from the package phase, just to enable splitting later.
+phases:
+  build:
+    commands:
+      - echo Testing started on `date`
+      - mvn test
+      - echo Testing finished on `date`
