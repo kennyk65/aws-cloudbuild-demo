@@ -8,3 +8,5 @@ Example of a simple web app that shows the instance environment.
 - Show actuator
 - Thymeleaf is used for web pages
 - Bootstrap is used for formatting.
+
+
