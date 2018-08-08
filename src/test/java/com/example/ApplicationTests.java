@@ -12,6 +12,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 public class ApplicationTests {
 
+	// Really need to add a meaningful test here.
 	@Test
 	//@Ignore
 	public void contextLoads() {
