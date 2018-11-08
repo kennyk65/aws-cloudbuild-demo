@@ -11,3 +11,4 @@ Example of a simple web app that shows the instance environment.
 
 Snuh!
 
+ 
