@@ -7,7 +7,7 @@ Example of a simple web app that shows the instance environment.
 - Behaves nicely when running outside of AWS
 - Show actuator  
 - Thymeleaf is used for web pages     
-- Bootstrap is used for formatting.
+- Bootstrap is used for formatting. 
 
 Snuh! 
        
