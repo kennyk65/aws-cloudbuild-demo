@@ -5,9 +5,9 @@ version: 0.2
 # The output file is identified by its name only (getting rid of 'target' on the path), which means it will 
 # show up later in the S3 bucket with just its name and no pathing. 
 phases:
-  install:
-    runtime-versions:
-      java: openjdk8  
+  # install:
+  #   runtime-versions:
+  #     java: openjdk8  
   build:
     commands:
       - echo Testing started on `date`
