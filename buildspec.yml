@@ -22,3 +22,6 @@ artifacts:
   files:
     - target/spring-cloud-aws-environment-demo-1.war
   discard-paths: yes
+cache:
+  paths:
+    - '/root/.m2/**/*'
