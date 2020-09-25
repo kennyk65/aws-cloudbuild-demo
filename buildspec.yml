@@ -20,7 +20,7 @@ phases:
       - echo Build finished on `date`
 artifacts:
   files:
-    - target/spring-cloud-aws-environment-demo-1.war
+    - target/cloud-build-demo.war
   discard-paths: yes
 #  This is implementing a "local / custom" cache to reduce maven download time on subsequent builds.
 #  See https://aws.amazon.com/about-aws/whats-new/2019/02/aws-codebuild-now-supports-local-caching/
