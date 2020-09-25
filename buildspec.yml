@@ -7,7 +7,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: openjdk811 
+      java: openjdk11 
   build:
     commands:
       - echo Testing started on `date`
