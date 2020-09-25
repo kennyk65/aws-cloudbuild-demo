@@ -67,7 +67,7 @@
 	        	<optional>true</optional>
 	    	</dependency>
 		
-		<!-- As of Java 11, JAXB is not included, and some things in Spring still expect it, even when there is no XML in the app.
+		<!-- As of Java 11, JAXB is not included, and some things in Spring still expect it, even when there is no XML in the app.-->
 		<dependency>
 		        <groupId>org.glassfish.jaxb</groupId>
 		        <artifactId>jaxb-runtime</artifactId>
