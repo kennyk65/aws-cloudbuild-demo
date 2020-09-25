@@ -91,6 +91,8 @@
 
 	<build>
  		<plugins>
+
+		<!-- Spring Boot plugin creates WARs that can't run in Elastic Beanstalk, so just make regular WAR.			
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -98,7 +100,8 @@
 				     <executable>true</executable>
 				</configuration>
 			</plugin>
-
+		 -->
+		 
 			<!-- Required to get the resulting JAR to run as a service. -->			
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
