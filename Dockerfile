@@ -11,6 +11,8 @@ COPY ./target/cloud-build-demo-1.jar app.jar
 # Optional, adds a last modified time to each file.  Not needed here.
 RUN bash -c 'touch /app.jar'
 
+EXPOSE 8080
+
 # Equivalent of running "java -jar /app.jar".
 ENTRYPOINT ["java","-jar","/app.jar"]
 
