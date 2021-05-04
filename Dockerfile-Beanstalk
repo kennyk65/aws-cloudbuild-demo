@@ -12,9 +12,9 @@ COPY ./target/cloud-build-demo-1.jar app.jar
 RUN bash -c 'touch /app.jar'
 
 # ElasticBeanstalk wont let you use any other port
-EXPOSE 5000
+EXPOSE 8080
 
 # Equivalent of running "java -jar /app.jar".
-ENTRYPOINT ["java","-Dserver.port=5000","-jar","/app.jar"]
+ENTRYPOINT ["java","-Dserver.port=8080","-jar","/app.jar"]
 
 # You can run with a command like "docker container run -d -p 8080:5000 demo", using whatever port you want other than 8080.
