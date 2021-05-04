@@ -15,6 +15,6 @@ RUN bash -c 'touch /app.jar'
 EXPOSE 5000
 
 # Equivalent of running "java -jar /app.jar".
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-Dserver.port=5000","-jar","/app.jar"]
 
-# You can run with a command like "docker container run -d -p 8080:8080 demo", using whatever port you want other than 8080.
+# You can run with a command like "docker container run -d -p 8080:5000 demo", using whatever port you want other than 8080.
