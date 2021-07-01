@@ -1,6 +1,6 @@
 # You can build this with "docker image build -t demo ."
 # The Docker image we are building will be based on Java 11: 
-# Avoiding DockerHub pull limit by using a copy stored in my AWS account:
+# Avoiding DockerHub pull limit by using a copy stored in my AWS account: 
 #FROM openjdk:11
 FROM public.ecr.aws/kkrueger/openjdk:11
 
