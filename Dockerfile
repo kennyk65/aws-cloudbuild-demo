@@ -1,7 +1,7 @@
 # You can build this with "docker image build -t demo ."
 # The Docker image we are building will be based on Java 11:
 #FROM openjdk:11
-FROM 011673140073.dkr.ecr.us-west-2.amazonaws.com/openjdk:11
+FROM public.ecr.aws/kkrueger/openjdk:11
 
 # Optional, in case anything uses local disk.  Will be in var/lib/docker
 VOLUME /tmp
