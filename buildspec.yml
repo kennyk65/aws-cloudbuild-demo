@@ -1,6 +1,6 @@
 version: 0.2
 
-# This is a configuration file for AWS CodeBuild.  It just runs maven.        
+# This is a configuration file for AWS CodeBuild.  It just runs maven.           
 # The test phase is run separately from the package phase, just to enable splitting later.  
 # The output file is identified by its name only (getting rid of 'target' on the path), which means it will      
 # show up later in the S3 bucket with just its name and no pathing. 
