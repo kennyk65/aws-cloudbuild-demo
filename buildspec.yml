@@ -18,6 +18,12 @@ phases:
       - echo Build started on `date`
       - mvn -f pom-jar.xml package -DskipTests
       - echo Build finished on `date`
+reports:
+  # Maven surefire plugin runs JUnit test and writes to target/surefire-reports/*.xml
+  mvn-test-reports:
+    files:
+    - "target/surefire-reports/*.xml"
+    file-format: "JUNITXML"      
 artifacts:
   files:
     - target/cloud-build-demo-1.jar
