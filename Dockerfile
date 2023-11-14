@@ -1,20 +1,22 @@
 # You can build this with "docker image build -t demo ."
-# The Docker image we are building will be based on Java 11:
-#FROM openjdk:11
-FROM 011673140073.dkr.ecr.us-west-2.amazonaws.com/openjdk:11
+# The Docker image we are building will be based on Java 17:
+FROM eclipse-temurin:17.0.5_8-jre-alpine
 
-# Optional, in case anything uses local disk.  Will be in var/lib/docker
-VOLUME /tmp
+# Make a new directory and use it as work directory:
+WORKDIR /opt/app
 
-# Adding the file we just created in the build process as 'app.jar'
-COPY ./target/cloud-build-demo-1.jar app.jar
-
-# Optional, adds a last modified time to each file.  Not needed here.
-RUN bash -c 'touch /app.jar'
+# Adding the file we just created in the build process as 'app.war'
+COPY /target/cloud-build-demo-17.war app.war
 
 EXPOSE 80
 
-# Equivalent of running "java -jar /app.jar".
-ENTRYPOINT ["java","-jar","/app.jar"]
+# Do not run as root.  Instead create a group and user.
+# Change the ownership of WORKDIR so javauser can run from here
+RUN addgroup --system javauser \
+&& adduser -S -s /usr/sbin/nologin -G javauser javauser \
+&& chown -R javauser:javauser .
 
+# Change user to non-root and run:
+USER javauser
+ENTRYPOINT ["java", "-jar", "app.war"]
 # You can run with a command like "docker container run -d -p 8080:80 demo", using whatever port you want other than 8080.
