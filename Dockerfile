@@ -6,7 +6,7 @@ FROM eclipse-temurin:17.0.5_8-jre-alpine
 WORKDIR /opt/app
 
 # Adding the file we just created in the build process as 'app.war'
-COPY /target/cloud-build-demo-17.war app.war
+COPY /target/cloud-build-demo-17.jar app.jar
 
 EXPOSE 80
 
@@ -18,5 +18,5 @@ RUN addgroup --system javauser \
 
 # Change user to non-root and run:
 USER javauser
-ENTRYPOINT ["java", "-jar", "app.war"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
 # You can run with a command like "docker container run -d -p 8080:80 demo", using whatever port you want other than 8080.
