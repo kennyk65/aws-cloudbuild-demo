@@ -1,14 +1,10 @@
 pipeline {
     agent any
-    description 'just a test. build java with maven'
     options {
         buildDiscarder(logRotator(numToKeepStr: '2', daysToKeepStr: '1'))
     }
     triggers {
         pollSCM('H/2 * * * *')
-    }
-    environment {
-        // Define environment variables if needed
     }
     tools {
         maven 'M3'
